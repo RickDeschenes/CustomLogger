@@ -1,9 +1,9 @@
 ﻿# Ensure script runs from repository root
-Set-Location 'C:\Source\CustomLogger'
+Set-Location 'C:\Source\CustomLogger\CustomLogger'
 $owner = 'rickdeschenes'
 
 # 1) Set token in an env var for this session
-$env:NUGET_API_KEY = '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'
+$env:NUGET_API_KEY = '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'
 
 # Ensure token is available
 if (-not $env:NUGET_API_KEY) { Write-Error 'Environment variable NUGET_API_KEY is not set.'; exit 1 }
