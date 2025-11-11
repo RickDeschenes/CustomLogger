@@ -4,6 +4,26 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <!-- NuGet package metadata -->
+    <PackageId>CustomLogger</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>RickDeschenes</Authors>
+    <Company>RickDeschenes</Company>
+    <Description>Lightweight file-based logger library.</Description>
+
+    <!-- Create package on build -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>false</IncludeSymbols>
+
+    <PackageTags>logging;logger;file-logger</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/RickDeschenes/CustomLogger</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/RickDeschenes/CustomLogger</PackageProjectUrl>
+
+    <!-- Ensure packages are emitted into project-root artifacts folder -->
+    <PackageOutputPath>$(MSBuildProjectDirectory)/artifacts</PackageOutputPath>
   </PropertyGroup>
 
 </Project>

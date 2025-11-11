@@ -1,0 +1,31 @@
+permissions:
+  contents: read
+  packages: write
+
+name: Publish NuGet package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Pack
+        run: dotnet pack CustomLogger/CustomLogger.csproj -c Release -o ./artifacts
+
+      - name: Publish to GitHub Packages
+        run: dotnet nuget push .\artifacts\CustomLogger.1.0.0.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
