@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/MSBuild_Logs
+/GithubNuget.ps1
+/GitHub.txt
