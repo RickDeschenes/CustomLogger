@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
 
     <!-- NuGet package metadata -->
-    <PackageId>CustomLogger</PackageId>
-    <Version>1.0.2</Version>
+    <PackageId>AnotherLogger</PackageId>
+    <Version>1.0.3</Version>
     <Authors>RickDeschenes</Authors>
     <Company>RickDeschenes</Company>
     <Description>Lightweight file-based logger library.</Description>
