@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace CustomLogger;
+namespace AnotherLogger;
 
 /// <summary>
 /// Logger that returns the log entry to the method

@@ -1,4 +1,4 @@
-namespace CustomLogger;
+namespace AnotherLogger;
 
 public static class LoggerFactory
 {
